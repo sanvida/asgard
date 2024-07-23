@@ -85,3 +85,24 @@ To run the unit tests for the project, use the following command:
 python -m unittest test_schedule_script.py
 ```
 This will execute the test cases defined in test_schedule_script.py, ensuring the EC2 management functionalities work as expected.
+
+## Using GitHub Codespaces
+
+1. **Open in Codespaces**: Click the "Code" button on the GitHub repository page and select "Open with Codespaces" to create a new Codespace.
+2. Change the directory
+   ```bash
+   cd ec2_management
+   ```
+3. **Install Dependencies**: Once the Codespace is set up, run the following commands in the terminal to install the required dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. Run the ec2 management script:
+    ```python
+   python schedule_script.py
+   ```
+5. Testing
+   Run the tests using unittest:
+   ```python
+   python -m unittest test_schedule_script.py
+   ```
