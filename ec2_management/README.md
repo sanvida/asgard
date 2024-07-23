@@ -4,7 +4,6 @@
 
 This project provides Python scripts for managing AWS EC2 instances using the Boto3 library. The scripts include functionalities to:
 
-- Create an EC2 instance with a public address.
 - Start and stop the instance based on scheduling rules.
 - Test the EC2 management functionalities using unit tests.
 
@@ -19,56 +18,70 @@ This project provides Python scripts for managing AWS EC2 instances using the Bo
 1. **Clone the Repository**
 
    ```sh
-   git clone https://github.com/yourusername/your-repository.git
-   cd ec2_instance_management_using_boto3
-
+   git clone https://github.com/sanvida/asgard.git
+   cd ec2_management
    ```
 
-2. Create and Activate a Virtual Environment
+2. **Create and Activate a Virtual Environment**
 
-   # Create a virtual environment
+   I. Create a virtual environment
 
+   ```python
    python -m venv venv
+   ```
 
-   # Activate the virtual environment
+   II. Activate the virtual environment
 
-   # On Windows
+   **On Windows**
 
+   ```python
    venv\Scripts\activate
-
-   # On macOS/Linux
-
+   ```
+   
+   **On macOS/Linux**
+   ```sh
    source venv/bin/activate
+   ```
 
-3. Install Dependencies
+3. **Install Dependencies**
 
-   # Ensure you are in the virtual environment and install the required packages:
-
+   Ensure you are in the virtual environment and install the required packages:
+   ```python
    pip install -r requirements.txt
+   ```
 
-4. Configuration
-   # Update the schedule_script.py file with your AWS credentials, region, AMI ID, key pair name, subnet ID, and security group ID
+4. **Configuration**
+   Update the schedule_script.py file with your AWS credentials
+   ```python
    aws_access_key_id = 'YOUR_ACCESS_KEY'
    aws_secret_access_key = 'YOUR_SECRET_KEY'
    region_name = 'YOUR_REGION'
+   ```
 
 ## Usage
 
-# Scheduling EC2 Instance
+### Scheduling EC2 Instance
 
-To schedule the instance to start and stop based on specific days and times, uncomment the schedule_instance() line in schedule_script.py and run the script:
+To schedule the instance to start and stop based on specific days and times as mentioned in the code, run the script:
 
-# Stopping and Starting the Instance
+```python
+python schedule_script.py
+```
+
+### Stopping and Starting the Instance
 
 You can manually start and stop the instance using the following functions in schedule_script.py:
+
+```python
 start_instance(instance_id)
 stop_instance(instance_id)
-
+```
 Replace instance_id with the ID of your EC2 instance.
 
 ## Testing
+To run the unit tests for the project, use the following command:
 
-# To run the unit tests for the project, use the following command:
-
+```python
 python -m unittest test_schedule_script.py
-This will execute the test cases defined in test_schedule_script.py, ensuring that the EC2 management functionalities work as expected.
+```
+This will execute the test cases defined in test_schedule_script.py, ensuring the EC2 management functionalities work as expected.
