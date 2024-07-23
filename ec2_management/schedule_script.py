@@ -5,9 +5,9 @@ import os
 
 # Initialize a session using Amazon EC2
 session = boto3.Session(
-    aws_access_key_id = os.getenv('aws_access_key_id'),
-    aws_secret_access_key = os.getenv('aws_secret_access_key'),
-    region_name = os.getenv('region_name')
+    aws_access_key_id = os.getenv('AWS_ACCESS_KEY_ID'),
+    aws_secret_access_key = os.getenv('AWS_SECRET_ACCESS_KEY'),
+    region_name = os.getenv('REGION_NAME')
 )
 
 # Initialize the EC2 resource
