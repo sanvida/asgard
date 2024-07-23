@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import patch, MagicMock
 from datetime import datetime
-import schedule_script
+import ec2_management.schedule_script as schedule_script
 import os
 
 INSTANCE_ID = os.getenv('INSTANCE_ID')
